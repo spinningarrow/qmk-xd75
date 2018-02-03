@@ -22,9 +22,6 @@
 #define _FN1 1
 #define _FN2 2
 #define _SCROLL 3
-bool _FN1_status = false;
-bool _FN2_status = false;
-bool _SCROLL_status = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -97,40 +94,3 @@ void matrix_scan_user(void) {
     old_layer = new_layer;
   }
 }
-
-/* bool process_record_user(uint16_t keycode, keyrecord_t *record) { */
-/*   switch(keycode) { */
-/*     case TG(_FN1): */
-/*       if (record->event.pressed) { */
-/*         _FN1_status = !_FN1_status; */
-/*         if (_FN1_status) { */
-/*           rgblight_setrgb(0, 0xFF, 0); */
-/*         } else { */
-/*           rgblight_setrgb(0, 0, 0); */
-/*         } */
-/*       } */
-/*       return true; */
-/*     case TG(_FN2): */
-/*       if (record->event.pressed) { */
-/*         _FN2_status = !_FN2_status; */
-/*         if (_FN2_status) { */
-/*           rgblight_setrgb(0, 0, 0xFF); */
-/*         } else { */
-/*           rgblight_setrgb(0, 0, 0); */
-/*         } */
-/*       } */
-/*       return true; */
-/*     case TG(_SCROLL): */
-/*       if (record->event.pressed) { */
-/*         _SCROLL_status = !_SCROLL_status; */
-/*         if (_SCROLL_status) { */
-/*           rgblight_setrgb(0xFF, 0xFF, 0); */
-/*         } else { */
-/*           rgblight_setrgb(0, 0, 0); */
-/*         } */
-/*       } */
-/*       return true; */
-/*     default: */
-/*       return true; */
-/*   } */
-/* } */
