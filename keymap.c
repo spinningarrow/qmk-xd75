@@ -70,7 +70,7 @@ void matrix_scan_user(void) {
         break;
 
       case F_KEYS:
-        rgblight_setrgb(0xFF, 0xFF, 0);
+        rgblight_setrgb(0xFF, 0, 0xFF);
         break;
 
       case F_SCROLL:
